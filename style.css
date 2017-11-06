@@ -1,0 +1,115 @@
+/* SPACE BACKGROUND////////////////////////////////////////*/
+body{
+    background: url(img/background.jpg) no-repeat 100%;
+    width: 100%;
+    margin: 0;
+}
+/* MAGIC 8 BALL HEADER////////////////////////////////////////*/
+h1{
+    font-family: 'Chango', cursive;
+    font-size: 4.5em;
+    width: 100%;
+    color: white;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+/* ANSWER TRIANGLES AND THE SPEED BETWEEN 0 AND 100% OPACITY////////////////////////////////////////*/
+}
+img{
+    opacity: 0;
+    transition: opacity 3s;
+     position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0;
+    margin: auto;
+}
+/* INPUT BOX////////////////////////////////////////*/
+input{
+    border: black 5px solid;
+    width: 40%;
+    height: 35px;
+    font-size: 1.2em;
+    text-align: center;
+    margin-top: 55vh;
+}
+/* BUTTON////////////////////////////////////////*/
+.button {
+ margin: 10px;
+ text-align: center;
+ background: none;
+ padding: 10px;
+ border-radius: 15px;
+}
+button {
+ /*background: #5be0f3;*/
+ align-content: center;
+ background: orange;
+ border: none;
+ border-radius: 2px;
+ font-size: 20px;
+ margin: 5px;
+ padding: 20px;
+ color: #ffffff;
+ font-weight: 600;
+ width: 200px
+}
+button:hover {
+ cursor: pointer;
+ background: #5be0f3;
+ color: #000;
+ font-weight: 600;
+}
+button:active {
+ background: #5be0f3;
+ color: #000;
+ font-weight: 600;
+}
+/* INPUT BOX WHEN INPUT INCORRECT////////////////////////////////////////*/
+.inputIncorrect{
+    border: red 5px solid;
+}
+/* THE MAGIC 8 BALL ITSELF////////////////////////////////////////*/
+.ball{
+    position: absolute;
+    top: -25%; bottom: 0; left: 0; right: 0;
+    margin: auto;
+    height: 444px;
+    width: 400px;
+    background-image: url(img/Sprite.png);
+    justify-content: center;
+    align-content: center;
+
+}
+/* SPIN AND SHAKE ANIMATIONS////////////////////////////////////////*/
+@keyframes shake{
+        25%{
+            transform: translateX(-10px);
+        }
+        75%{
+            transform: translateX(10px);
+        }
+}
+@keyframes spin{
+    100%{
+        background-position: -2000px 0px;
+    }
+}
+
+.spinAnimation{
+    animation: spin 0.5s steps(5, end) forwards;
+}
+.shakeAnimation{
+    animation: shake 0.1s 8;
+}
+
+
+
+
+@keyframes spin2{
+    100%{
+        background-position: -2000px 0px;
+    }
+}
+
+.spinAnimation2{
+    animation: spin2 0.5s steps(5, end) reverse;
+}
