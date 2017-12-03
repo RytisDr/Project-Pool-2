@@ -27,7 +27,10 @@ function spin(){
 
 function randomNumber(){
     ball.removeEventListener('animationend', randomNumber);
-    let rnd = Math.floor(Math.random()*20);
+    min = Math.ceil(0);
+    max = Math.floor(19);
+    let rnd = Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive, this one works all the time, because the radius is set precisely.
+    //let rnd = Math.floor(Math.random()*20); woking one, but sometimes rolls nothing, because nothing is assigned.
     console.log(rnd);
     triangles[rnd].style.display='inline';
     triangles[rnd].style.opacity=1;
